@@ -34,8 +34,6 @@ import org.springframework.util.FileCopyUtils;
 /**
  * Configuration class that allows for Tomcat access via HTTP (test only) and
  * HTTPS.
- *
- * @author Arnaldo Piccinelli
  */
 @Configuration
 @EnableConfigurationProperties

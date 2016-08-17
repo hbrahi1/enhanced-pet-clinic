@@ -37,8 +37,6 @@ import sample.ui.view.XmlViewResolver;
 
 /**
  * Configures View-related items.
- *
- * @author Arnaldo Piccinelli
  */
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {

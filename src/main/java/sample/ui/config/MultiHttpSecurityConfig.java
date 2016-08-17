@@ -53,8 +53,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 /**
  * Class containing all security methods and beans.
- *
- * @author Arnaldo Piccinelli
  */
 @Configuration
 @EnableWebMvcSecurity

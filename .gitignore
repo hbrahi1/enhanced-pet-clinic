@@ -8,3 +8,5 @@ file*.txt
 xml*.xml
 target/
 /application.port
+git.properties
+

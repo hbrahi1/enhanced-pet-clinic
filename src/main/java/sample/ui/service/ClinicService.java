@@ -21,6 +21,7 @@ import org.springframework.dao.DataAccessException;
 
 import sample.ui.message.Message;
 import sample.ui.model.Owner;
+import sample.ui.model.Party;
 import sample.ui.model.Pet;
 import sample.ui.model.PetType;
 import sample.ui.model.User;
@@ -28,12 +29,6 @@ import sample.ui.model.UserProfile;
 import sample.ui.model.Vet;
 import sample.ui.model.Visit;
 
-/**
- * Mostly used as a facade for all controllers.
- *
- * @author Michael Isvy
- * @author Arnaldo Piccinelli
- */
 public interface ClinicService {
 
     // User
@@ -63,5 +58,10 @@ public interface ClinicService {
     public Collection<Message> findMessages() throws DataAccessException;
     public Message saveMessage(Message message) throws DataAccessException;
     public Message findMessage(Long id) throws DataAccessException;
+    
+    // Party
+    public Party findPartyById(long id) throws DataAccessException;
+    public void saveParty(Party party) throws DataAccessException;
+    public Collection<Party> findParties() throws DataAccessException;
 
 }

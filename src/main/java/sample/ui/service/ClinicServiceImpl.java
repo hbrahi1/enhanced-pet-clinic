@@ -26,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 import sample.ui.message.Message;
 import sample.ui.message.MessageRepository;
 import sample.ui.model.Owner;
+import sample.ui.model.Party;
 import sample.ui.model.Pet;
 import sample.ui.model.PetType;
 import sample.ui.model.User;
@@ -33,19 +34,13 @@ import sample.ui.model.UserProfile;
 import sample.ui.model.Vet;
 import sample.ui.model.Visit;
 import sample.ui.repository.OwnerRepository;
+import sample.ui.repository.PartyRepository;
 import sample.ui.repository.PetRepository;
 import sample.ui.repository.PetTypeRepository;
 import sample.ui.repository.UserRepository;
 import sample.ui.repository.VetRepository;
 import sample.ui.repository.VisitRepository;
 
-/**
- * Mostly used as a facade for all controllers Also a placeholder for @Transactional
- * and @Cacheable annotations
- *
- * @author Michael Isvy
- * @author Arnaldo Piccinelli
- */
 @Service("clinicService")
 public class ClinicServiceImpl implements ClinicService {
 
@@ -69,6 +64,9 @@ public class ClinicServiceImpl implements ClinicService {
 
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private PartyRepository partyRepository;
 
     @Override
     @Transactional(readOnly = true)
@@ -166,4 +164,24 @@ public class ClinicServiceImpl implements ClinicService {
     public User saveUser(User user) {
         return userRepository.save(user);
     }
+	
+	@Override
+   @Transactional(readOnly = true)
+   public Party findPartyById(long id) throws DataAccessException {
+       return partyRepository.findById(id);
+   }
+
+	@Override
+	@Transactional
+   public void saveParty(Party party) throws DataAccessException {
+       partyRepository.save(party);
+   }
+	
+   @Override
+   @Transactional(readOnly = true)
+   @Cacheable(value = "parties")
+   public Collection<Party> findParties() throws DataAccessException {
+       return partyRepository.findAll();
+   }
+
 }

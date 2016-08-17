@@ -27,11 +27,6 @@ import com.github.dandelion.datatables.core.web.filter.DatatablesFilter;
 import com.github.dandelion.datatables.thymeleaf.dialect.DataTablesDialect;
 import com.github.dandelion.thymeleaf.dialect.DandelionDialect;
 
-/**
- * Configuration class to set up Dandelion-related beans.
- *
- * @author Arnaldo Piccinelli
- */
 @Component
 @Configuration
 public class DandelionConfig {

@@ -39,9 +39,6 @@ import com.rometools.rome.feed.atom.Feed;
 /**
  * A view creating a Atom representation from a list of Visit objects.
  *
- * @author Alef Arendsen
- * @author Arjen Poutsma
- * @author Arnaldo Piccinelli
  */
 @Configuration
 public class VetsAtomView extends AbstractAtomFeedView {

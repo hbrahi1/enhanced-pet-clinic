@@ -19,7 +19,6 @@
 
                 <h2 th:text="#{welcome}">Welcome!</h2>
 
-                <img src="/images/pets.png" th:src="@{/images/pets.png}" />
             </div>
 
             <div role="alert" th:if="${statusMessage}" th:class="'alert ' + ${statusMessageClass}?: 'alert-info'" th:text="${statusMessage}" />

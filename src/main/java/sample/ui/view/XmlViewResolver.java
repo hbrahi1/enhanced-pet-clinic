@@ -24,8 +24,6 @@ import org.springframework.web.servlet.view.xml.MarshallingView;
 
 /**
  * Allows lists to be output as XML data.
- *
- * @author Arnaldo Piccinelli
  */
 public class XmlViewResolver implements ViewResolver {
 

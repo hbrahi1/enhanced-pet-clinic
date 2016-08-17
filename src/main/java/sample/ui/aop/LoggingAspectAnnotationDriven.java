@@ -27,8 +27,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * Class used to house all aspect-related method.
- *
- * @author arnaldopiccinelli
  */
 @Aspect
 @EnableAspectJAutoProxy

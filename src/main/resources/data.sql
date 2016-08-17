@@ -86,3 +86,11 @@ insert into visits(id, pet_id, visit_date, description) values (1, 7, '2013-01-0
 insert into visits(id, pet_id, visit_date, description) values (2, 8, '2013-01-02', 'rabies shot');
 insert into visits(id, pet_id, visit_date, description) values (3, 8, '2013-01-03', 'neutered');
 insert into visits(id, pet_id, visit_date, description) values (4, 7, '2013-01-04', 'spayed');
+
+insert into party(id, party_name, city_name) values (1, 'Bell', 'Montreal');
+insert into party(id, party_name, city_name) values (2, 'Total', 'Paris');
+insert into party(id, party_name, city_name) values (3, 'Sonatrach', 'Algiers');
+
+insert into contact(id, first_name, party_id) values (1, 'Tom', 1);
+insert into contact(id, first_name, party_id) values (2, 'John', 1);
+insert into contact(id, first_name, party_id) values (3, 'Mike', 1);
